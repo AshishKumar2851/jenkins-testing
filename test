@@ -1,11 +1,16 @@
 pipeline {
     agent any
+    environment {
+        GREETING = 'Hello, Jenkins!'
+        DOCKER_IMAGE = 'myapp:latest'
+    }
     stages {
         stage('Hello') {
             steps {
-                echo 'Hello World'
+                sh 'echo access via env ${env.$GREETING} and docker image ${env.$DOCKER_IMAGE}'
+                sh 'echo access via shell : $GREETING and docker image $DOCKER_IMAGE '
                 // DATE=`date +%d-%m-%Y`
-                echo "Today's date is : \$DATE"
+               // echo "Today's date is : \$DATE"
             }
          }
     }
