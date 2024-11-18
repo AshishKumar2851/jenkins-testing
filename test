@@ -1,0 +1,2 @@
+DATE=`date +%d-%m-%Y`
+echo "Today's date is : $DATE"
