@@ -1,1 +1,19 @@
+pipeline {
+    agent any
+    stages {
+        stage('Redirect Output') {
+            steps {
+                script {
+                    // Run a shell command and redirect output to a file
+                    sh 'echo "This is some output" > output.txt'
 
+                    // Append additional output to the file
+                    sh 'echo "Appending more output" >> output.txt'
+
+                    // Display the contents of the file in the Jenkins console
+                    sh 'cat output.txt'
+                }
+            }
+        }
+    }
+}
