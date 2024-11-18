@@ -7,8 +7,8 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                sh 'echo access via env ${env.$GREETING} and docker image ${env.$DOCKER_IMAGE}'
-                sh 'echo access via shell : $GREETING and docker image $DOCKER_IMAGE '
+                sh "echo access via env ${env.$GREETING} and docker image ${env.$DOCKER_IMAGE}"
+                sh 'echo access via shell : $GREETING and docker image $DOCKER_IMAGE'
                 // DATE=`date +%d-%m-%Y`
                // echo "Today's date is : \$DATE"
             }
