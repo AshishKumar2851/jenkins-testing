@@ -7,11 +7,13 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                /bin/bash 'echo "access via env ${env.GREETING} and docker image ${env.DOCKER_IMAGE}" > out.txt'
-                /bin/bash 'echo "access via shell : $GREETING and docker image $DOCKER_IMAGE" >> out.txt'
-                /bin/bash 'cat out.txt'
+                script {
+                sh 'echo "access via env ${env.GREETING} and docker image ${env.DOCKER_IMAGE}" > out.txt'
+                sh 'echo "access via shell : $GREETING and docker image $DOCKER_IMAGE" >> out.txt'
+                sh 'cat out.txt'
                 // DATE=`date +%d-%m-%Y`
                // echo "Today's date is : \$DATE"
+                }
             }
          }
     }
