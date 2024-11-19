@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Redirect Output') {
             steps {
-                script {
+                /*script {
                     // Run a shell command and redirect output to a file
                     sh 'echo "This is some output" > output.txt'
 
@@ -12,7 +12,11 @@ pipeline {
 
                     // Display the contents of the file in the Jenkins console
                     sh 'cat output.txt'
-                }
+                } */
+                sh '''
+                    #!/bin/bash
+                    echo "Now you inside the bash shell"
+                '''
             }
         }
     }
