@@ -1,4 +1,4 @@
-pipeline {
+/*pipeline {
     agent any
     environment {
         GREETING = 'Hello, Jenkins!'
@@ -20,4 +20,5 @@ pipeline {
             }
          }
     }
-}
+} */
+echo "shell : $SHELL"
