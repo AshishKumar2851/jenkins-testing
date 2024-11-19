@@ -16,6 +16,7 @@ pipeline {
                 sh '''
                     #!/bin/bash
                     echo "Now you inside the bash shell"
+                    chmod +x test.sh
                     ./test.sh
                 '''
             }
