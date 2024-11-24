@@ -10,7 +10,7 @@
                 script {
                // sh 'echo "access via env ${env.GREETING} and docker image ${env.DOCKER_IMAGE}" > out.txt'
                 sh 'echo "access via shell : $GREETING and docker image $DOCKER_IMAGE" > out.txt'
-                sh 'echo "access via env and docker image" >> out.txt'
+                //sh 'echo "access via env and docker image" >> out.txt'
                 sh 'echo "Date : `date +%dth-%b-%Y`" >> out.txt'
                 //sh 'echo "Shell : $SHELL" >> out.txt'
                 sh 'cat out.txt'
