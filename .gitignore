@@ -1,5 +1,5 @@
-##### Ignore all log files
+##### Ignore all log files  ##########
 *.log
 
-#### Ignore all files in temp directory
+#### Ignore all files in temp directory ######
 temp/
